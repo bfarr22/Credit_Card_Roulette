@@ -1,0 +1,15 @@
+import random
+# Split string method to seperate user input into list format
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+
+# Get number of items in list
+num_items = len(names)
+# generate random numbers between 0 and last index
+random_choice = random.randint(0, num_items -1)
+person_to_pay = names[random_choice]
+print(person_to_pay + ' is buying today!')
+# print(random.randint(0, len(names)))
+
+#easier way to do this is to use the .choice function, see below. 
+# person_to_pay = random.choice(names)
